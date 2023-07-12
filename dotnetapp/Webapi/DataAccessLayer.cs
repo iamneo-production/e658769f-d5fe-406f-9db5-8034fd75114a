@@ -4,8 +4,6 @@ using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-
-
 namespace Webapi
 {
     internal class DataAccessLayer
@@ -14,6 +12,36 @@ namespace Webapi
         SqlCommand cmd = null;
         SqlDataAdapter adapter = null;
         SqlDataReader dr = null;
+        internal string SaveUser(UserModel user)
+        {
+            cmd = new SqlCommand("select * from UserModel where Email = '" + user.Email + "'", con);
+            con.Open();
+            dr = cmd.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                con.Close();
+                return "false";
+            }
+            else
+            {
+                con.Close();
+                cmd = new SqlCommand("insert into UserModel Values('" + user.Email + "','" + user.Password + "','" + user.username + "'," +
+                    "'" + user.mobileNumber + "','"+user.userRole+"') ", con);
+                    con.Open();
+                int rowsaffected = cmd.ExecuteNonQuery();
+                con.Close();
+                if (rowsaffected > 0)
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false";
+                }
+            }
+        }
+
 
         internal string addLoan(LoanApplicantModel user)
         {

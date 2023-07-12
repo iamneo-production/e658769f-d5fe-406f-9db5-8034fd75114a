@@ -9,7 +9,9 @@ namespace Webapi
             return (dal.addLoan(user));
         }
          
-        
-    }
-
+        public string SaveUser(UserModel user)
+        {
+            return (dal.SaveUser(user));
+        }
+}
 }
