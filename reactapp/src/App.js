@@ -1,5 +1,4 @@
-import Signup from "./components/Signup"
-import Customerapplyloan from "./components/Customerapplyloan";
+import Customerapplyloan from "./Components/Customerapplyloan";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 function App() {
