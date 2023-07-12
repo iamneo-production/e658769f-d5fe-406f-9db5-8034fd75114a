@@ -4,8 +4,6 @@ using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-
-
 namespace Webapi
 {
     internal class DataAccessLayer
@@ -30,7 +28,7 @@ namespace Webapi
                 con.Close();
                 cmd = new SqlCommand("insert into UserModel Values('" + user.Email + "','" + user.Password + "','" + user.username + "'," +
                     "'" + user.mobileNumber + "','"+user.userRole+"') ", con);
-                con.Open();
+                    con.Open();
                 int rowsaffected = cmd.ExecuteNonQuery();
                 con.Close();
                 if (rowsaffected > 0)
@@ -42,6 +40,23 @@ namespace Webapi
                     return "false";
                 }
             }
+        }
+
+
+        internal string addLoan(LoanApplicantModel user)
+        {
+                cmd = new SqlCommand("insert into LoanApplicantModel Values('" + user.loantype + "','" + user.applicantName + "','" + user.applicantAddress + "','" + user.applicantMobile + "','"+user.applicantEmail+"','" + user.applicantAadhaar + "','" + user.applicantPan + "','" + user.applicantSalary + "','" + user.loanAmountRequired + "','" + user.loanRepaymentMonths + "') ", con);
+                con.Open();
+                int rowsaffected = cmd.ExecuteNonQuery();
+                con.Close();
+                if (rowsaffected > 0)
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false";
+                }  
         }
     }
 }

@@ -42,3 +42,5 @@ app.UseCors(builder =>
 app.MapControllers();
 
 app.Run();
+
+app.Run();
