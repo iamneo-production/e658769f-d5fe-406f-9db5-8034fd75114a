@@ -1,0 +1,65 @@
+.ApplyloanPage{
+  background-color: #f2f6f3;
+  height: 100vh;
+}
+
+.ApplyloanHead{
+  background-color: #fafafb;       
+}
+
+.Applyloanstrong {
+  color: white;
+  font-size: 2rem;
+}
+.Applyloanstrong1 {
+  color: white;
+  font-size: 2rem;
+}
+#months{
+  width: 100%;
+}
+#mobileNumber{
+  width: 100%;
+}
+#confirmPassword{
+  width: 100%;
+}
+#enterName{
+  width: 100%;
+}
+#months{
+  width: 100%;
+}
+#salary{
+  width: 100%;
+}
+#enterAddress{
+  width: 100%;
+}
+
+.SignupPage{
+  background-color: #c7d3e2;
+  height: 100vh;
+}
+
+.signupHead{
+  background-color: #3F5F73;       
+}
+
+.signupHead strong {
+  color: white;
+  font-size: 2rem;
+}
+#username{
+  width: 100%;
+}
+#mobileNumber{
+  width: 100%;
+}
+#confirmPassword{
+  width: 100%;
+}
+#username{
+  width: 100%;
+}
+
