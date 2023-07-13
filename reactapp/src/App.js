@@ -1,7 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Adminappliedloan from '/home/coder/project/workspace/reactapp/src/components/Adminappliedloan.jsx'
+import Adminappliedloan from './Components/Adminappliedloan.jsx'
 function App() {
   return (
     <BrowserRouter>
