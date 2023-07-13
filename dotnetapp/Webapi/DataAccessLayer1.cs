@@ -8,13 +8,13 @@ using Microsoft.Extensions.Configuration;
 
 namespace Webapi
 {
-    internal class DataAccessLayer
+    internal class DataAccessLayer1
     {
         SqlConnection con = new SqlConnection("User ID =sa;password=examlyMssql@123;server=localhost;Database=businessloan;trusted_connection=false;Persist Security Info =False;Encrypt=False");
         SqlCommand cmd = null;
         SqlDataAdapter adapter = null;
         SqlDataReader dr = null;
-        internal string SaveUser(UserModel user)
+        internal string SaveUser(User_Model user)
         {
             cmd = new SqlCommand("select * from UserModel where Email = '" + user.Email + "'", con);
             con.Open();

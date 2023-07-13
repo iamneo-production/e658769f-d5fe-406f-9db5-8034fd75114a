@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Webapi
 {
-    public class UserModel
+    public class User_Model
     {
         public string Email { get; set; }
         public string Password { get; set; }
