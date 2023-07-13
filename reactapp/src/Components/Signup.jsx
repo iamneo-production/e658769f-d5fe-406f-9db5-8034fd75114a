@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import SignupAuth from './Auth';
+import SignupAuth from './SignupAuth';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 function Signup() {
