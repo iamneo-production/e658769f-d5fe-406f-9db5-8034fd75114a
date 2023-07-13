@@ -7,6 +7,10 @@ namespace Webapi
         {
             return (dal.SaveUser(user));
         }
+        public List<LoanApplicantModel> getAllLoans()
+        {
+            return dal.getAllLoans();
+        }
     }
 
 }
