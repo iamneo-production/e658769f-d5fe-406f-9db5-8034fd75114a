@@ -125,6 +125,11 @@ function Customerapplyloan() {
                             {errors.loanRepaymentMonths && <span className='text-danger'>{errors.loanRepaymentMonths}</span>}
                         </div>
 
+                        <div class="col-12 mb-3">
+                            <label for="file" class="form-label">Select Document</label>
+                            <input type="file" id="image" name="image" className='form-control rounded-0' onChange={handleInput}/> 
+                        </div>
+
                         <div>
                             <div className='col'>
                                 <button type='submit' id="submitButton" className='btn btn-success w-100 rounded-0'> Submit</button>
