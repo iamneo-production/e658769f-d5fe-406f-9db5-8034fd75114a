@@ -1,34 +1,92 @@
-.ApplyloanPage{
-  background-color: #f2f6f3;
-  height: 100vh;
+.grid-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  
+}
+.image-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px; /* Optional: Add some margin from the top */
 }
 
-.ApplyloanHead{
-  background-color: #fafafb;       
+
+table {
+  width: 100%;
+  height: 200%;
+ 
 }
 
-.Applyloanstrong {
+td {
+  padding: 5px;
+ 
+}
+
+td:first-child {
+  
+  width: 100px;
+}
+
+tr {
+  text-align: left; /* Align rows to the left */
+  background-color: #c7d3e2;
+   /* Make all rows bold */
+}
+
+
+/* ... */
+
+/* Appliedloans.css */
+/* ... */
+
+.reject-btn {
+  
+  color: rgb(5, 5, 5);
+  background-color: red;
+}
+
+
+.approved {
+  background-color: green;
   color: white;
-  font-size: 2rem;
 }
-#months{
-  width: 100%;
+.rejected {
+  background-color: red;
+  color: white;
 }
-#mobileNumber{
-  width: 100%;
+
+.reject-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
-#confirmPassword{
-  width: 100%;
+.status {
+padding: 5px 10px;
+border-radius: 5px;
+font-weight: bold;
 }
-#enterName{
-  width: 100%;
+
+.approve-btn,
+.reject-btn {
+padding: 5px 10px;
+border: none;
+border-radius: 5px;
+color: #fff;
+cursor: pointer;
+outline: none;
 }
-#months{
-  width: 100%;
+
+.approve-btn {
+background-color: green;
+margin-right: 10px;
 }
-#salary{
-  width: 100%;
+
+.reject-btn {
+background-color: red;
 }
-#enterAddress{
-  width: 100%;
+
+.approve-btn:disabled,
+.reject-btn:disabled {
+opacity: 0.6;
+cursor: not-allowed;
 }
+
+/* ... */
