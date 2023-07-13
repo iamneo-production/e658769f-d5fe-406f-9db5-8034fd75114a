@@ -1,0 +1,43 @@
+.profile-form {
+    background-color: #8868a1;
+    padding: 155px;
+  }
+  
+  .profile-container h3 {
+    color: white;
+  }
+  .profile-container {
+    padding: 35px;
+    background-color: #8868a1;
+    align-items: flex-start;
+  }
+  
+  .profile-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .profile-column {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 12px;
+  }
+  
+  
+  .profile-value {
+    background-color: #F0F0F0;
+    padding: 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bolder;
+    margin-right: 100px;
+  }
