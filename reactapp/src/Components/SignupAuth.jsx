@@ -1,7 +1,7 @@
 function SignupAuth(values) {
     let error = {}
-    const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    const pwd_pattern = /^[a-zA-Z0-9@]{8,}$/
+    const email_pattern = /^[^\s@]{2,102}@[^\s@]{4,256}\.[^\s@]{2,}$/
+    const pin_pattern = /^[a-zA-Z0-9@]{8,}$/
     const username_pattern = /^[a-zA-Z0-9]{3,}$/ //alpha numeric character
     const mobilenumber_pattern = /^[0-9]{10}$/
   
@@ -14,12 +14,12 @@ function SignupAuth(values) {
     }
   
     if (!values.pwd) {
-      error.pwd = "Pwd should not be empty";
-    } else if (!pwd_pattern.test(values.pwd)) {
-      error.pwd =
-        "Pwd must be at least 8 characters long";
+      error.pin = "pin should not be empty";
+    } else if (!pin_pattern.test(values.pin)) {
+      error.pin =
+        "Pin must be at least 8 characters long";
     } else {
-        error.pwd="";
+        error.pin="";
     }
   
     if (!values.confirmPwd) {
