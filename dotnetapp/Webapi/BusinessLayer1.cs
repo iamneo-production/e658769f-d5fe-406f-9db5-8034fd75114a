@@ -19,6 +19,10 @@ namespace Webapi
         {
             return dal.isUserPresent();
         }
+        public List<LoanApplicantModel> getProfile()
+        {
+            return dal.getProfile();
+        }
     }
 
 }
