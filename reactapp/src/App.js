@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Customerapplyloan from "./Components/Customerapplyloan1"
+import Adminappliedloans from "./Adminappliedloans";
+import Signup from "./Components/Signup"
+import Login from "/Components/Login"
+import "./Components/Customerapplyloan1"
+import "./Components/Login"
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path='/user/signup' element={<Signup />}></Route>
+          <Route path='/user/addLoan' element={<Customerapplyloan/>}></Route>
+          <Route path='/admin/getAllLoans' element={<Adminappliedloans />}></Route>
+          <Route path='/user/login' element={<Login/>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
