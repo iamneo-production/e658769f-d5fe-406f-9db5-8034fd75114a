@@ -54,6 +54,35 @@ function Adminappliedloans() {
       .catch((err) => console.log(err));
   };
 
+  function rejectapprove(approvalStatus,loanId){
+    if(approvalStatus==='approved'){
+      return(<span className='status approved'>Approved</span>)
+    }
+    else if(approvalStatus === 'rejected'){
+      return(<span className='status rejected'>Rejected</span>)
+    }
+    else{
+      return(
+        <>
+          <button id="adminApproveLoan"
+            className={`approve-btn ${item.approvalStatus === 'rejected' ? 'disabled' : ''}`}
+            onClick={() => handleApprove(item.loanid)}
+            disabled={item.approvalStatus === 'rejected'}
+          >
+            Approve
+          </button>
+          <button id="adminRejectLoan"
+            className={`reject-btn ${item.approvalStatus === 'approved' ? 'disabled' : ''}`}
+            onClick={() => handleReject(item.loanid)}
+            disabled={item.approvalStatus === 'approved'}
+          >
+            Reject
+          </button>
+        </>
+      )
+    }
+  }
+
   const handleReject = (loanId) => {
     axios
       .post('http://localhost:8081/admin/getAllLoans/reject', { loanId })
@@ -124,6 +153,7 @@ function Adminappliedloans() {
                     <td>{item.loanAmountRequired}</td>
                     <td>Applicant Loan ID:</td>
                     <td>{item.loanId}</td>
+                    <td>{rejectapprove(item.approvalStatus,item.loanId)}</td>
                   </tr>
                 </tbody>
               </table>
