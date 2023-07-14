@@ -5,6 +5,7 @@ import Loandetails from "./Components/Adminapprovedloan";
 import Profile from "./Components/Profile";
 import Signup from "./Components/Signup"
 import Login from "/Components/Login"
+import HomePage from "./Components/HomePage";
 import "./Components/Customerapplyloan.css"
 import "./Components/Login.css"
 import "./Components/Profile.css"
@@ -22,6 +23,7 @@ function App() {
           <Route path='/user/getProfile' element={<Profile/>}></Route>
           <Route path='/user/viewLoan' element={<Loanstatus/>}></Route>
           <Route path='/user/loandetails' element={<Loandetails/>}></Route>
+          <Route path='/home' element={<HomePage/>}></Route>
       </Routes>
     </BrowserRouter>
   );
