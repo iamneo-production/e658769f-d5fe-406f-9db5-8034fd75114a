@@ -20,7 +20,7 @@ function Login() {
     const validationErrors = LoginAuth(values);
     setError(validationErrors);
 
-    if (validationErrors.email === '' && validationErrors.pwd === '') {
+    if (validationErrors.email === '' && validationErrors.pwd === ''){
       try {
         const res = await axios.post('http://localhost:8081/user/login', values);
         if (res.data.Status === 'Success') {
