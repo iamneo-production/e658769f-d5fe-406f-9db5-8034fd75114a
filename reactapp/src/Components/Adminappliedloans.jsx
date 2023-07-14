@@ -54,7 +54,7 @@ function Adminappliedloans() {
       .catch((err) => console.log(err));
   };
 
-  function rejectapprove(approvalStatus,loanId){
+  function rejectapprove(approvalStatus){
     if(approvalStatus==='approved'){
       return(<span className='status approved'>Approved</span>)
     }
@@ -153,7 +153,7 @@ function Adminappliedloans() {
                     <td>{item.loanAmountRequired}</td>
                     <td>Applicant Loan ID:</td>
                     <td>{item.loanId}</td>
-                    <td>{rejectapprove(item.approvalStatus,item.loanId)}</td>
+                    <td>{rejectapprove(item.approvalStatus)}</td>
                   </tr>
                 </tbody>
               </table>
