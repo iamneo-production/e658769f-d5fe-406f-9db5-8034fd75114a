@@ -3,7 +3,7 @@ function SignupAuth(values) {
     const email_pattern = /^[^\s@]{2,102}@[^\s@]{4,256}\.[^\s@]{2,}$/
     const pin_pattern = /^[a-zA-Z0-9@]{8,}$/
     const username_pattern = /^[a-zA-Z0-9]{3,}$/ //alpha numeric character
-    const mobilenumber_pattern = /^[0-9]{10}$/
+    const mobilenumber_pattern = /^\d{10}$/
   
     if (!values.email) {
       error.email = "Email should not be empty";

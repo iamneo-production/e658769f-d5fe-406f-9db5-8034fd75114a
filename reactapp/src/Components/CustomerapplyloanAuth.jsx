@@ -1,12 +1,12 @@
 function CustomerapplyloanAuth(values) {
     let error={}
     const email_pattern = /^[^\s@]{2,102}@[^\s@]{4,256}\.[^\s@]{2,}$/
-    const mobilenumber_pattern = /^[0-9]{10}$/
-    const aadhar_pattern = /^[0-9]{12}$/
-    const pan_pattern = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/
-    const salary_pattern= /^[0-9]*$/
-    const amount_pattern= /^[0-9]*$/
-    const repay_pattern= /^[0-9]*$/
+    const mobilenumber_pattern = /^\d{10}$/
+    const aadhar_pattern = /^\d{12}$/
+    const pan_pattern = /^[A-Z]{5}\d{4}[A-Z]$/
+    const salary_pattern= /^\d*$/
+    const amount_pattern= /^\d*$/
+    const repay_pattern= /^\d*$/
   
     if (!values.applicantMobile) {
         error.applicantMobile= "Mobile number can't be empty";
