@@ -8,7 +8,7 @@ namespace Webapi.Controllers
     {
         BusinessLayer1 dal = new BusinessLayer1();
         [HttpGet]
-        [Route("user/viewLoan")]
+        [Route("user/loandetails")]
         public List<LoanApplicantModel> loandetails()
         { 
             return(dal.loandetails());
