@@ -1,0 +1,18 @@
+.Navcolor{
+    color: aliceblue;
+    background-color:rgb(85, 85, 173);
+    min-height:70px;
+  }
+  .inpstyle{
+    min-width: 320px;
+    height: 40px;
+    border-radius: 6px;
+  }
+  .inpstyle::placeholder {
+    font-size: 20px;
+  }
+  .trackbtn{
+    width:140px;
+    font-size:20px;
+    border-radius: 15px;
+  }
