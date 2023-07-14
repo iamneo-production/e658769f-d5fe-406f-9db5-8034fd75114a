@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-//import './Adminappliedloans.css';
+import './Adminappliedloans.css';
 
 function Adminappliedloans() {
   const [data, setData] = useState([]);
