@@ -35,6 +35,10 @@ namespace Webapi
         {
             return dal.generateSchedule();
         }
+        public List<LoanApplicantModel> getDocuments()
+        {
+            return dal.getDocuments();
+        }
     }
 
 }
