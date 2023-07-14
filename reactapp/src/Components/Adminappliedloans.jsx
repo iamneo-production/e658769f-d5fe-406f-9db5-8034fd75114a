@@ -105,25 +105,25 @@ function Adminappliedloans() {
                 <tbody>
                   <tr>
                     <td>Applicant name:</td>
-                    <td>{item.enterName}</td>
+                    <td>{item.applicantName}</td>
                     <td>Applicant Address:</td>
-                    <td>{item.enterAddress}</td>
+                    <td>{item.applicantAddress}</td>
                     <td>Applicant Email:</td>
-                    <td>{item.email}</td>
+                    <td>{item.applicantEmail}</td>
                   </tr>
                   <tr>
                     <td>Applicant phone no:</td>
-                    <td>{item.mobileNumber}</td>
+                    <td>{item.applicantMobile}</td>
                     <td>Applicant Addhaar:</td>
-                    <td>{item.enterAadharNo}</td>
+                    <td>{item.applicantAadhaar}</td>
                     <td>Applicant PAN no:</td>
-                    <td>{item.enterPanNo}</td>
+                    <td>{item.applicantPan}</td>
                   </tr>
                   <tr>
                     <td>Loan amount:</td>
-                    <td>{item.enterAmount}</td>
+                    <td>{item.loanAmountRequired}</td>
                     <td>Applicant Loan ID:</td>
-                    <td>{item.loanid}</td>
+                    <td>{item.loanId}</td>
                     <td colSpan='2'>
                       {item.approvalStatus === 'approved' ? (
                         <span className='status approved'>Approved</span>

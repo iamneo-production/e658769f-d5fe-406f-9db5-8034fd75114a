@@ -1,6 +1,7 @@
 import Customerapplyloan from "./Components/Customerapplyloan1"
 import Adminappliedloans from "./Components/Adminappliedloans";
 import Loanstatus from "./Components/Customerloanstatus";
+import Loandetails from "./Components/Adminapprovedloan";
 import Profile from "./Components/Profile";
 import Signup from "./Components/Signup"
 import Login from "/Components/Login"
@@ -20,6 +21,7 @@ function App() {
           <Route path='/user/login' element={<Login/>}></Route>
           <Route path='/user/getProfile' element={<Profile/>}></Route>
           <Route path='/user/viewLoan' element={<Loanstatus/>}></Route>
+          <Route path='/user/loandetails' element={<Loandetails/>}></Route>
       </Routes>
     </BrowserRouter>
   );

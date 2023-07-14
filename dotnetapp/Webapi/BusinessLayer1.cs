@@ -27,6 +27,10 @@ namespace Webapi
         {
             return dal.viewLoan();
         }
+        public List<LoanApplicantModel> loandetails()
+        {
+            return dal.loandetails();
+        }
     }
 
 }
