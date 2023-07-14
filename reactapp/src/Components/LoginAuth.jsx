@@ -12,10 +12,10 @@ function LoginAuth(values){
     }
     //email authentication
     if(values.password === ""){
-        error.password = "Password should not be empty"
+        error.password = "Pwd should not be empty"
     }
     else if(!password_pattern.test(values.password)) {
-        error.password = "Password should be 2 letters long."
+        error.password = "Pwd should be 2 letters long."
     } else {
         error.password=""
     }

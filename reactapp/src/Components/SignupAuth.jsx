@@ -14,18 +14,18 @@ function SignupAuth(values) {
     }
   
     if (!values.password) {
-      error.password = "Password should not be empty";
+      error.password = "Pwd should not be empty";
     } else if (!password_pattern.test(values.password)) {
       error.password =
-        "Password must be at least 8 characters long";
+        "Pwd must be at least 8 characters long";
     } else {
         error.password="";
     }
   
     if (!values.confirmPassword) {
-      error.confirmPassword = "Confirm Password should not be empty";
+      error.confirmPassword = "Confirm Pwd should not be empty";
     } else if (String(values.confirmPassword) !== String(values.password)) {
-      error.confirmPassword = "Confirm Password didn't match";
+      error.confirmPassword = "Confirm Pwd didn't match";
     } else {
         error.confirmPassword = "";
     }
