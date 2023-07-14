@@ -43,5 +43,233 @@ namespace Webapi
                 }
             }
         }
+        public List<LoanApplicantModel> getAllLoans()
+        {
+            List<LoanApplicantModel> loans = new List<LoanApplicantModel>();
+
+            using (SqlConnection con = new SqlConnection("User ID =sa;password=examlyMssql@123;server=localhost;Database=businessloan;trusted_connection=false;Persist Security Info =False;Encrypt=False"))
+            {
+                con.Open();
+
+                string query = "SELECT * FROM LoanApplicantModel";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            LoanApplicantModel loan = new LoanApplicantModel
+                            {
+                                loanId = (int)reader["loanId"],
+                                applicantName = reader["applicantName"].ToString(),
+                                
+                            };
+
+                            loans.Add(loan);
+                        }
+                    }
+                }
+            }
+
+            return loans;
+        }
+        internal string addLoan(LoanApplicantModel user)
+        {
+                cmd = new SqlCommand("insert into LoanApplicantModel Values('" + user.loantype + "','" + user.applicantName + "','" + user.applicantAddress + "','" + user.applicantMobile + "','"+user.applicantEmail+"','" + user.applicantAadhaar + "','" + user.applicantPan + "','" + user.applicantSalary + "','" + user.loanAmountRequired + "','" + user.loanRepaymentMonths + "') ", con);
+                con.Open();
+                int rowsaffected = cmd.ExecuteNonQuery();
+                con.Close();
+                if (rowsaffected > 0)
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false";
+                }  
+        }
+        public List<User_Model> isUserPresent()
+        {
+            List<User_Model> loans = new List<User_Model>();
+
+            using (SqlConnection con = new SqlConnection("User ID =sa;password=examlyMssql@123;server=localhost;Database=businessloan;trusted_connection=false;Persist Security Info =False;Encrypt=False"))
+            {
+                con.Open();
+
+                string query = "SELECT * FROM User_Model";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            User_Model loan = new User_Model
+                            {
+                                
+                                Email = reader["Email"].ToString(),
+                                Password = reader["Password"].ToString(),
+                            };
+
+                            loans.Add(loan);
+                        }
+                    }
+                }
+            }
+
+            return loans;
+        }
+
+
+        public List<LoanApplicantModel> getProfile()
+        {
+            List<LoanApplicantModel> loans = new List<LoanApplicantModel>();
+
+            using (SqlConnection con = new SqlConnection("User ID =sa;password=examlyMssql@123;server=localhost;Database=businessloan;trusted_connection=false;Persist Security Info =False;Encrypt=False"))
+            {
+                con.Open();
+
+                string query = "SELECT * FROM LoanApplicantModel";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            LoanApplicantModel loan = new LoanApplicantModel
+                            {
+                                loanId = (int)reader["loanId"],
+                                applicantName = reader["applicantName"].ToString(),
+                                
+                            };
+
+                            loans.Add(loan);
+                        }
+                    }
+                }
+            }
+
+            return loans;
+        }
+        public List<LoanApplicantModel> viewLoan()
+        {
+            List<LoanApplicantModel> loans = new List<LoanApplicantModel>();
+
+            using (SqlConnection con = new SqlConnection("User ID =sa;password=examlyMssql@123;server=localhost;Database=businessloan;trusted_connection=false;Persist Security Info =False;Encrypt=False"))
+            {
+                con.Open();
+
+                string query = "SELECT * FROM LoanApplicantModel";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            LoanApplicantModel loan = new LoanApplicantModel
+                            {
+                                loanId = (int)reader["loanId"],
+                                applicantName = reader["applicantName"].ToString(),
+                                
+                            };
+
+                            loans.Add(loan);
+                        }
+                    }
+                }
+            }
+
+            return loans;
+        }
+        public List<LoanApplicantModel> loandetails()
+        {
+            List<LoanApplicantModel> loans = new List<LoanApplicantModel>();
+
+            using (SqlConnection con = new SqlConnection("User ID =sa;password=examlyMssql@123;server=localhost;Database=businessloan;trusted_connection=false;Persist Security Info =False;Encrypt=False"))
+            {
+                con.Open();
+
+                string query = "SELECT * FROM LoanApplicantModel";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            LoanApplicantModel loan = new LoanApplicantModel
+                            {
+                                loanId = (int)reader["loanId"],
+                                applicantName = reader["applicantName"].ToString(),
+                                
+                            };
+
+                            loans.Add(loan);
+                        }
+                    }
+                }
+            }
+
+            return loans;
+        }
+        public List<LoanApplicantModel> generateSchedule()
+        {
+            List<LoanApplicantModel> loans = new List<LoanApplicantModel>();
+
+            using (SqlConnection con = new SqlConnection("User ID =sa;password=examlyMssql@123;server=localhost;Database=businessloan;trusted_connection=false;Persist Security Info =False;Encrypt=False"))
+            {
+                con.Open();
+
+                string query = "SELECT * FROM LoanApplicantModel";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            LoanApplicantModel loan = new LoanApplicantModel
+                            {
+                                loanId = (int)reader["loanId"],
+                                applicantName = reader["applicantName"].ToString(),
+                                
+                            };
+
+                            loans.Add(loan);
+                        }
+                    }
+                }
+            }
+
+            return loans;
+        }
+        public List<LoanApplicantModel> getDocuments()
+        {
+            List<LoanApplicantModel> loans = new List<LoanApplicantModel>();
+
+            using (SqlConnection con = new SqlConnection("User ID =sa;password=examlyMssql@123;server=localhost;Database=businessloan;trusted_connection=false;Persist Security Info =False;Encrypt=False"))
+            {
+                con.Open();
+
+                string query = "SELECT * FROM LoanApplicantModel";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            LoanApplicantModel loan = new LoanApplicantModel
+                            {
+                                loanId = (int)reader["loanId"],
+                                applicantName = reader["applicantName"].ToString(),
+                                
+                            };
+
+                            loans.Add(loan);
+                        }
+                    }
+                }
+            }
+
+            return loans;
+        }
+
     }
 }

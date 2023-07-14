@@ -1,65 +1,38 @@
-.ApplyloanPage{
-  background-color: #f2f6f3;
-  height: 100vh;
+.App {
+  text-align: center;
 }
 
-.ApplyloanHead{
-  background-color: #fafafb;       
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.Applyloanstrong {
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  font-size: 2rem;
-}
-.Applyloanstrong1 {
-  color: white;
-  font-size: 2rem;
-}
-#months{
-  width: 100%;
-}
-#mobileNumber{
-  width: 100%;
-}
-#confirmPassword{
-  width: 100%;
-}
-#enterName{
-  width: 100%;
-}
-#months{
-  width: 100%;
-}
-#salary{
-  width: 100%;
-}
-#enterAddress{
-  width: 100%;
 }
 
-.SignupPage{
-  background-color: #c7d3e2;
-  height: 100vh;
+.App-link {
+  color: #61dafb;
 }
 
-.signupHead{
-  background-color: #3F5F73;       
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-.signupHead strong {
-  color: white;
-  font-size: 2rem;
-}
-#username{
-  width: 100%;
-}
-#mobileNumber{
-  width: 100%;
-}
-#confirmPassword{
-  width: 100%;
-}
-#username{
-  width: 100%;
-}
-
