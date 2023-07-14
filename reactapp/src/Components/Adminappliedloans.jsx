@@ -124,30 +124,6 @@ function Adminappliedloans() {
                     <td>{item.loanAmountRequired}</td>
                     <td>Applicant Loan ID:</td>
                     <td>{item.loanId}</td>
-                    <td colSpan='2'>
-                      {item.approvalStatus === 'approved' ? (
-                        <span className='status approved'>Approved</span>
-                      ) : item.approvalStatus === 'rejected' ? (
-                        <span className='status rejected'>Rejected</span>
-                      ) : (
-                        <>
-                          <button id="adminApproveLoan"
-                            className={`approve-btn ${item.approvalStatus === 'rejected' ? 'disabled' : ''}`}
-                            onClick={() => handleApprove(item.loanid)}
-                            disabled={item.approvalStatus === 'rejected'}
-                          >
-                            Approve
-                          </button>
-                          <button id="adminRejectLoan"
-                            className={`reject-btn ${item.approvalStatus === 'approved' ? 'disabled' : ''}`}
-                            onClick={() => handleReject(item.loanid)}
-                            disabled={item.approvalStatus === 'approved'}
-                          >
-                            Reject
-                          </button>
-                        </>
-                      )}
-                    </td>
                   </tr>
                 </tbody>
               </table>
