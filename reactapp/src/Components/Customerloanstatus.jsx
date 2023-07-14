@@ -6,7 +6,6 @@ function Loanstatus() {
   const [loanId, setLoanId] = useState('');
   const [loanStatus, setLoanStatus] = useState('');
   const [loanData, setLoanData] = useState(null);
-  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleTrack = (e) => {
     e.preventDefault();

@@ -8,7 +8,6 @@ function Loandetails() {
   const [loanId, setLoanId] = useState('');
   const [Loandetails, setLoandetails] = useState('');
   const [loanData, setLoanData] = useState(null);
-  const [isNavOpen, setIsNavOpen] = useState(false);
   const [data, setData] = useState([]);
 
 
