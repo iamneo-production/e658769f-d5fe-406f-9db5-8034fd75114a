@@ -6,7 +6,7 @@ import axios from 'axios';
 function Login() {
   const [values, setValues] = useState({
     email: '',
-    password: ''
+    pwd: ''
   });
   const navigate = useNavigate();
   const [errors, setError] = useState('');
@@ -21,7 +21,7 @@ function Login() {
     const validationErrors = LoginAuth(values);
     setError(validationErrors);
 
-    if (validationErrors.email === '' && validationErrors.password === '') {
+    if (validationErrors.email === '' && validationErrors.pwd === '') {
       try {
         const res = await axios.post('http://localhost:8081/user/login', values);
         if (res.data.Status === 'Success') {
@@ -77,11 +77,11 @@ function Login() {
                 type='password'
                 id='password'
                 placeholder='Enter Password'
-                name='password'
+                name='pwd'
                 onChange={handleInput}
                 className='form-control rounded-0'
               />
-              {errors.password && <span className='text-danger'>{errors.password}</span>}
+              {errors.pwd && <span className='text-danger'>{errors.pwd}</span>}
             </div>
 
 

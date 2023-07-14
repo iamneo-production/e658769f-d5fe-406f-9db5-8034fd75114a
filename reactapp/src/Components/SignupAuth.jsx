@@ -1,7 +1,7 @@
 function SignupAuth(values) {
     let error = {}
     const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    const password_pattern = /^[a-zA-Z0-9@]{8,}$/
+    const pwd_pattern = /^[a-zA-Z0-9@]{8,}$/
     const username_pattern = /^[a-zA-Z0-9]{3,}$/ //alpha numeric character
     const mobilenumber_pattern = /^[0-9]{10}$/
   
@@ -13,21 +13,21 @@ function SignupAuth(values) {
         error.email= "";
     }
   
-    if (!values.password) {
-      error.password = "Pwd should not be empty";
-    } else if (!password_pattern.test(values.password)) {
-      error.password =
+    if (!values.pwd) {
+      error.pwd = "Pwd should not be empty";
+    } else if (!pwd_pattern.test(values.pwd)) {
+      error.pwd =
         "Pwd must be at least 8 characters long";
     } else {
-        error.password="";
+        error.pwd="";
     }
   
-    if (!values.confirmPassword) {
-      error.confirmPassword = "Confirm Pwd should not be empty";
-    } else if (String(values.confirmPassword) !== String(values.password)) {
-      error.confirmPassword = "Confirm Pwd didn't match";
+    if (!values.confirmPwd) {
+      error.confirmPwd = "Confirm Pwd should not be empty";
+    } else if (String(values.confirmPwd) !== String(values.pwd)) {
+      error.confirmPwd = "Confirm Pwd didn't match";
     } else {
-        error.confirmPassword = "";
+        error.confirmPwd = "";
     }
   
     if (!values.username) {
