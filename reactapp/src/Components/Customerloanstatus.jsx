@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-//import './Loanstatus.css';
 
 function Loanstatus() {
   const [loanId, setLoanId] = useState('');
   const [loanStatus, setLoanStatus] = useState('');
   const [loanData, setLoanData] = useState(null);
-  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleTrack = (e) => {
     e.preventDefault();
@@ -45,9 +43,6 @@ function Loanstatus() {
     localStorage.removeItem('authenticatedAdmin');
   }
 
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
 
   return (
     <React.Fragment>
