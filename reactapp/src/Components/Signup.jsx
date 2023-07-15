@@ -6,11 +6,11 @@ import { Link, Outlet, useNavigate } from 'react-router-dom';
 function Signup() {
   const [values, setValues] = useState({
     email: '',
-    password: '',
+    pwd: '',
     username: '',
     mobileNumber: '',
     userRole: '',
-    confirmPassword: ''
+    confirmPwd: ''
   });
 
   const navigate = useNavigate();
@@ -28,15 +28,15 @@ function Signup() {
 
     if (
       validationErrors.email === '' &&
-      validationErrors.password === '' &&
+      validationErrors.pwd === '' &&
       validationErrors.username === '' &&
       validationErrors.mobileNumber === '' &&
       validationErrors.userRole === '' &&
-      validationErrors.confirmPassword === ''
+      validationErrors.confirmPwd === ''
     ) {
       try {
         // eslint-disable-next-line
-        const res = await axios.post('https://8080-ddebbccceeecadceaedccbedbccfbaabccd.project.examly.io/user/signup', values).then(res=>{if(res.data){
+         await axios.post('https://8080-ddebbccceeecadceaedccbedbccfbaabccd.project.examly.io/user/signup', values).then(res=>{if(res.data){
             navigate('/user/login');
           }});
       } catch (err) {
@@ -100,23 +100,23 @@ function Signup() {
                 type='password'
                 id='password'
                 placeholder='Password'
-                name='password'
+                name='pwd'
                 onChange={handleInput}
                 className='form-control rounded-0'
               />
-              {errors.password && <span className='text-danger'>{errors.password}</span>}
+              {errors.pwd && <span className='text-danger'>{errors.pwd}</span>}
             </div>
             <div className='mb-3'>
               <input
                 type='password'
                 id='confirmPassword'
                 placeholder='Confirm Password'
-                name='confirmPassword'
+                name='confirmPwd'
                 onChange={handleInput}
                 className='form-control rounded-0'
               />
-              {errors.confirmPassword && (
-                <span className='text-danger'>{errors.confirmPassword}</span>
+              {errors.confirmPwd && (
+                <span className='text-danger'>{errors.confirmPwd}</span>
               )}
             </div>
             <div>
