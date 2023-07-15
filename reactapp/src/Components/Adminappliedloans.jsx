@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Adminappliedloans.css';
 
 function Adminappliedloans() {
@@ -53,6 +53,35 @@ function Adminappliedloans() {
       })
       .catch((err) => console.log(err));
   };
+
+  function rejectapprove(approvalStatus){
+    if(approvalStatus==='approved'){
+      return(<span className='status approved'>Approved</span>)
+    }
+    else if(approvalStatus === 'rejected'){
+      return(<span className='status rejected'>Rejected</span>)
+    }
+    else{
+      return(
+        <>
+          <button id="adminApproveLoan"
+            className={`approve-btn ${item.approvalStatus === 'rejected' ? 'disabled' : ''}`}
+            onClick={() => handleApprove(item.loanid)}
+            disabled={item.approvalStatus === 'rejected'}
+          >
+            Approve
+          </button>
+          <button id="adminRejectLoan"
+            className={`reject-btn ${item.approvalStatus === 'approved' ? 'disabled' : ''}`}
+            onClick={() => handleReject(item.loanid)}
+            disabled={item.approvalStatus === 'approved'}
+          >
+            Reject
+          </button>
+        </>
+      )
+    }
+  }
 
   const handleReject = (loanId) => {
     axios
@@ -124,30 +153,7 @@ function Adminappliedloans() {
                     <td>{item.loanAmountRequired}</td>
                     <td>Applicant Loan ID:</td>
                     <td>{item.loanId}</td>
-                    <td colSpan='2'>
-                      {item.approvalStatus === 'approved' ? (
-                        <span className='status approved'>Approved</span>
-                      ) : item.approvalStatus === 'rejected' ? (
-                        <span className='status rejected'>Rejected</span>
-                      ) : (
-                        <>
-                          <button id="adminApproveLoan"
-                            className={`approve-btn ${item.approvalStatus === 'rejected' ? 'disabled' : ''}`}
-                            onClick={() => handleApprove(item.loanid)}
-                            disabled={item.approvalStatus === 'rejected'}
-                          >
-                            Approve
-                          </button>
-                          <button id="adminRejectLoan"
-                            className={`reject-btn ${item.approvalStatus === 'approved' ? 'disabled' : ''}`}
-                            onClick={() => handleReject(item.loanid)}
-                            disabled={item.approvalStatus === 'approved'}
-                          >
-                            Reject
-                          </button>
-                        </>
-                      )}
-                    </td>
+                    <td>{rejectapprove(item.approvalStatus)}</td>
                   </tr>
                 </tbody>
               </table>
