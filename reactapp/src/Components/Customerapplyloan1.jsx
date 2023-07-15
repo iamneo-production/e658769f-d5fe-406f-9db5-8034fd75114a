@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import CustomerapplyloanAuth from "./CustomerapplyloanAuth";
@@ -73,54 +73,54 @@ function Customerapplyloan() {
                     <form onSubmit={handleSubmit}>
                     <div className='mb-3'>
                             <input type="text" id="loantype" placeholder='Enter Loantype' name='loantype'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.loantype && <span className='text-danger'>{errors.loantype}</span>}
                         </div>
                         <div className='mb-3'>
                             <input type="text" id="enterName" placeholder='Enter Applicant Name' name='applicantName'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.applicantName && <span className='text-danger'>{errors.applicantName}</span>}
                         </div>
                         <div className='mb-3'>
                             <input type="text" id="enterAddress" placeholder='Enter Applicant Address' name='applicantAddress'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.applicantAddress && <span className='text-danger'>{errors.applicantAddress}</span>}
                         </div>
                         <div className='mb-3'>
                             <input type="text" id="enterMobile" placeholder='Enter Mobilenumber' name='applicantMobile'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.applicantMobile && <span className='text-danger'>{errors.applicantMobile}</span>}
                         </div>
                         <div className='mb-3'>
                             <input type="email" id="enterEmail" placeholder='Enter Email' name='applicantEmail'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.applicantEmail && <span className='text-danger'>{errors.applicantEmail}</span>}
                         </div>
                         <div className='mb-3'>
                             <input type="text" id="enterAadharNo" placeholder='Enter Applicant Aadhar Number' name='applicantAadhaar'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.applicantAadhaar && <span className='text-danger'>{errors.applicantAadhaar}</span>}
                         </div>
                         <div className='mb-3'>
                             <input type="text" id="enterPanNo" placeholder='Enter Applicant Pan Number' name='applicantPan'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.applicantPan && <span className='text-danger'>{errors.applicantPan}</span>}
                         </div>
                         <div className='mb-3'>
                             <input type="text" id="enterSalary" placeholder='Enter salary' name='applicantSalary'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.applicantSalary && <span className='text-danger'>{errors.applicantSalary}</span>}
                         </div>
                         <div className='mb-3'>
                             <input type="text" id="enterAmount" placeholder='Enter Amount Required' name='loanAmountRequired'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.loanAmountRequired && <span className='text-danger'>{errors.loanAmountRequired}</span>}
                         </div>
 
 
                         <div className='mb-3'>
                             <input type="text" id="enterMonths" placeholder='Enter Months Required' name='loanRepaymentMonths'
-                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' />
+                                onChange={handleInput} className='form-control rounded-0' autoComplete='off' required/>
                             {errors.loanRepaymentMonths && <span className='text-danger'>{errors.loanRepaymentMonths}</span>}
                         </div>
 

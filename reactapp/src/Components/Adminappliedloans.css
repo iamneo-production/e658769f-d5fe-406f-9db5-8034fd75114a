@@ -78,11 +78,6 @@
   background-color: green;
   margin-right: 10px;
 }
-
-.reject-btn {
-  background-color: red;
-}
-
 .approve-btn:disabled,
 .reject-btn:disabled {
   opacity: 0.6;
