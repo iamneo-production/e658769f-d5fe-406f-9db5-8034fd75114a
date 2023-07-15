@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Adminapprovedloan.css';
 
@@ -8,7 +8,6 @@ function Loandetails() {
   const [loanId, setLoanId] = useState('');
   const [Loandetails, setLoandetails] = useState('');
   const [loanData, setLoanData] = useState(null);
-  const [isNavOpen, setIsNavOpen] = useState(false);
   const [data, setData] = useState([]);
 
 
@@ -66,9 +65,6 @@ function Loandetails() {
       .catch((err) => console.log(err));
   };
 
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
 
   return (
     <React.Fragment>
