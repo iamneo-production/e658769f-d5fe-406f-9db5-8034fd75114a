@@ -1,8 +1,8 @@
 function LoginAuth(values){
     
     let error = {}
-    const password_pattern = /^[a-zA-Z0-9]{2,}$/
-    //const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
+    const pin_pattern = /^[a-zA-Z0-9]{2,}$/
+    //const pwd_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
 
     if(values.email === "") {
         error.email="Email should not be empty"
@@ -11,13 +11,13 @@ function LoginAuth(values){
         error.email=""
     }
     //email authentication
-    if(values.password === ""){
-        error.password = "Password should not be empty"
+    if(values.pwd === ""){
+        error.pin = "Pin should not be empty"
     }
-    else if(!password_pattern.test(values.password)) {
-        error.password = "Password should be 2 letters long."
+    else if(!pin_pattern.test(values.pin)) {
+        error.pin = "Pin should be 2 letters long."
     } else {
-        error.password=""
+        error.pin=""
     }
     //password authentication
 
